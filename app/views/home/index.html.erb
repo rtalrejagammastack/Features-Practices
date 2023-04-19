@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+
+<div data-controller="dropdown" data-dropdown-open-value="true">
+
+  <div role="button" data-action="click->dropdown#toggleDropDown"> Toggle the dropdowm </div>
+
+  <div data-dropdown-target="dropdownContent">
+    <p>Find me in app/views/home/index.html.erb</p>
+  </div>
+</div>
+
+<div data-controller="dropdown">
+  <div role="button" data-action="click->dropdown#openDropDown" data-dropdown-target="openButton"> Click to Open</div>
+  <div role="button" data-action="click->dropdown#closeDropDown" data-dropdown-target="closeButton"> Click to Close</div>
+
+  <div data-dropdown-target="dropdownContent">
+    <p>Find me in app/views/home/index.html.erb</p>
+  </div>
+</div>

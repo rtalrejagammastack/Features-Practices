@@ -1,0 +1,12 @@
+<div data-controller="example4">
+  <form>
+    <select name="category" data-action="example4#filter">
+      <option>All</option>
+      <option>Windows </option>
+    </select>
+  </form>
+
+  <div data-example4-target="posts">
+    <%= render partial: 'posts' %>
+  </div>
+</div>

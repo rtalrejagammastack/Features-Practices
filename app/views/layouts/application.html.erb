@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container mt-5">
+      <%= yield %>
+    </div>
     <% if alert %>
       <div class="container alert"><%= alert %></div>
     <% elsif notice %>
