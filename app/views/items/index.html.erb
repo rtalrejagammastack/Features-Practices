@@ -1,6 +1,18 @@
-<%= form_tag(root_path, method: :get, remote: true, id: 'filter-form') do %>
+<%= form_tag(root_path, method: :get, remote: true, id: 'filter_form') do %>
   <%= select_tag 'category', options_for_select(@categories, params[:category]), id: 'category-select' %>
+  
+  <% @categories.each do |category| %>
+    <%= check_box_tag(category, category, nil, { multiple: true, form: :filter_form_1 } ) %>
+    <%= label_tag(category, category) %>
+  <% end %>
+
+  <%= submit_tag('Send') %>
 <% end %>
+
+<%= form_with url: root_path, method: :get, id: 'filter_form_1' do |form| %>
+  <%= form.submit %>
+<% end %>
+
 
 <div class="row mt-3 items-container">
   <div id="loading-spinner" class="spinner" style="display:none;"></div>
@@ -11,20 +23,6 @@
 
 <script>
   $(document).on('change', '#category-select', function() {
-    $('#filter-form').submit();
-  });
-
-  $(document).on('ajax:beforeSend', '#filter-form', function() {
-    // $('#items-container').addClass('loading');
-    $('#loading-spinner').show();
-  });
-
-  $(document).on('ajax:success', '#filter-form', function(event, data, status, xhr) {
-    $('#items-container').html(data);
-  });
-
-  $(document).on('ajax:complete', '#filter-form', function() {
-    // $('#items-container').removeClass('loading');
-    $('#loading-spinner').hide();
+    $('#filter_form').submit();
   });
 </script>
