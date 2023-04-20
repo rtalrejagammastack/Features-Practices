@@ -1,7 +1,8 @@
 require "test_helper"
 
 class QuoteTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    login_as users(:accountant)
+    @quote = Quote.ordered.first
+  end
 end
