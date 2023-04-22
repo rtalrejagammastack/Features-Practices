@@ -1,3 +1,5 @@
+@import '../mixins/_media';
+
 .line-item-date {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xxs);
@@ -12,9 +14,9 @@
   &__title {
     font-size: var(--font-size-xl);
 
-    // @include media(tabletAndUp) {
-      // font-size: var(--font-size-xxl);
-    // }
+    @include media(tabletAndUp) {
+      font-size: var(--font-size-xxl);
+    }
   }
 
   &__actions {
@@ -30,9 +32,9 @@
     padding: var(--space-xxs);
     padding-top: 0;
 
-    // @include media(tabletAndUp) {
-    //   padding: var(--space-m);
-    // }
+    @include media(tabletAndUp) {
+      padding: var(--space-m);
+    }
   }
 
   &__footer {
@@ -41,8 +43,8 @@
     text-align: center;
     padding: var(--space-xxs);
 
-    // @include media(tabletAndUp) {
-    //   padding: var(--space-m);
-    // }
+    @include media(tabletAndUp) {
+      padding: var(--space-m);
+    }
   }
 }

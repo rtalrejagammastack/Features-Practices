@@ -1,3 +1,5 @@
+@import '../mixins/_media';
+
 .line-item {
   display: flex;
   align-items: start;
@@ -17,9 +19,9 @@
     flex: 1 1 100%;
     font-weight: bold;
 
-    // @include media(tabletAndUp) {
-    //   flex: 1 1 0;
-    // }
+    @include media(tabletAndUp) {
+      flex: 1 1 0;
+    }
   }
 
   &__description {
@@ -38,29 +40,29 @@
 
     font-weight: bold;
 
-    // @include media(tabletAndUp) {
-    //   display: none;
-    // }
+    @include media(tabletAndUp) {
+      display: none;
+    }
   }
 
   &__quantity {
     flex: 1;
     display: none;
 
-    // @include media(tabletAndUp) {
-    //   display: revert;
-    //   flex: 0 0 7rem;
-    // }
+    @include media(tabletAndUp) {
+      display: revert;
+      flex: 0 0 7rem;
+    }
   }
 
   &__price {
     flex: 1;
     display: none;
 
-    // @include media(tabletAndUp) {
-    //   display: revert;
-    //   flex: 0 0 9rem;
-    // }
+    @include media(tabletAndUp) {
+      display: revert;
+      flex: 0 0 9rem;
+    }
   }
 
   &__actions {
@@ -69,10 +71,10 @@
     order: 2;
     flex: 1 1 auto;
 
-    // @include media(tabletAndUp) {
-    //   order: revert;
-    //   flex: 0 0 10rem;
-    // }
+    @include media(tabletAndUp) {
+      order: revert;
+      flex: 0 0 10rem;
+    }
   }
 
   &--form {
@@ -93,9 +95,9 @@
     background-color: var(--color-light);
     margin-bottom: var(--space-s);
 
-    // @include media(tabletAndUp) {
-    //   display: flex;
-    // }
+    @include media(tabletAndUp) {
+      display: flex;
+    }
 
     & > * {
       font-size: var(--font-size-s);

@@ -1,3 +1,5 @@
+@import '../mixins/_media';
+
 .quote-total {
   position: fixed;
   bottom: 0;
@@ -11,10 +13,10 @@
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
 
-  // @include media(tabletAndUp) {
-  //   padding-top: var(--space-m);
-  //   padding-bottom: var(--space-m);
-  // }
+  @include media(tabletAndUp) {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+  }
 
   &__inner {
     display: flex;
