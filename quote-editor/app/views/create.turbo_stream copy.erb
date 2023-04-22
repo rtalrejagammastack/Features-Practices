@@ -19,3 +19,16 @@ render @quote
 
 <%= turbo_stream.prepend "quotes", @quote %>
 <%= turbo_stream.update Quote.new, "" %>
+
+
+
+
+
+
+
+
+
+
+polymorphic route
+[quote, line_item_date]
+[:edit, quote, line_item_date],
