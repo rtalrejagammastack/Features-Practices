@@ -23,3 +23,15 @@
 <% end %>
 
 <%= render_turbo_stream_flash_messages %>
+
+
+
+
+
+
+
+
+<%= turbo_frame_tag dom_id(LineItem.new, dom_id(line_item_date)) %>
+line_item_date_1_new_item
+<%= turbo_frame_tag dom_id("line items", dom_id(line_item_date)) %>
+It will not generate and raise an error as dom_id needs an symbol instead of string
