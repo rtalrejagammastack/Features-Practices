@@ -21,4 +21,12 @@
     animation: appear-then-fade 4s both;
     border-radius: 999px;
   }
+  
+  &__alert{
+    background-color: var(--color-primary);
+  }
+
+  &__notice{
+    background-color: var(--color-secondary);
+  }
 }
