@@ -1,0 +1,12 @@
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), 
+                    html: { class: "form" } ) do |f| %>
+  <%= f.input :email,
+              required: true,
+              input_html: { autocomplete: "email", autofocus: true } %>
+  <%= f.input :password,
+              required: true,
+              input_html: { autocomplete: "current-password" } %>
+
+  <%= link_to "Cancel", root_path, class: "btn btn--light" %>
+  <%= f.submit "Log in", class: "btn btn--secondary" %>
+<% end %>

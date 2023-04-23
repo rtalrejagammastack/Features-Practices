@@ -3,9 +3,6 @@ en:
     placeholders:
       quote:
         name: Name of your quote
-    labels:
-      quote:
-        name: Name
       line_item:
         name: Name
         description: Description
@@ -13,8 +10,16 @@ en:
         unit_price: Unit price
       line_item_date:
         date: Date
+      user:
+        email: Email
+        password: Password
+    labels:
+      quote:
+        name: Name
   helpers:
     submit:
+      session:
+        create: Log in
       quote:
         create: Create quote
         update: Update quote
