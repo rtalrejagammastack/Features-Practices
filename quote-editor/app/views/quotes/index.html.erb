@@ -13,4 +13,7 @@
     <%= render "quotes/empty_state" %>
     <%= render @quotes %>
   <% end %>
+  <div class="pagy">
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+  </div>
 </main>
